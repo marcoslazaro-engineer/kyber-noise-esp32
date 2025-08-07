@@ -35,6 +35,7 @@ void app_main(void) {
     randombytes(seed, KYBER_SYMBYTES);
 
     ESP_LOGI(TAG, "Seed:");
+    printf("Seed : \n");
     for (int i = 0; i < KYBER_SYMBYTES; i++) printf("%02X", seed[i]);
     printf("\n\n");
 
