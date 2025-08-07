@@ -1,0 +1,8 @@
+Command: ninja all
+[1/4] cd /home/marcos/esp/kyber-esp32/build && /home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/marcos/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/marcos/esp/kyber-esp32/build/partition_table/partition-table.bin /home/marcos/esp/kyber-esp32/build/kyber-esp32.bin
+kyber-esp32.bin binary size 0x2fba0 bytes. Smallest app partition is 0x100000 bytes. 0xd0460 bytes (81%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/marcos/esp/kyber-esp32/build/bootloader && /home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/marcos/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/marcos/esp/kyber-esp32/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

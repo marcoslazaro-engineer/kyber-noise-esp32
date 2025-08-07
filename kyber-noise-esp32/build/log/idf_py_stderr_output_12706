@@ -1,0 +1,39 @@
+Command: /home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/marcos/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/marcos/esp/kyber-esp32/build/kyber-esp32.elf /home/marcos/esp/kyber-esp32/build/bootloader/bootloader.elf -m '/home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/home/marcos/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;33m--- esp-idf-monitor 1.7.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x40379559: [0;33mpanic_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40379521: [0;33mesp_system_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4037fd7d: [0;33mabort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x42008fb1: [0;33mapp_main[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/main/hello.c[0m[0m:[1;31m35[0m
+[0m--- 0x420142b9: [0;33mmain_task[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40379f69: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403796a9: [0;33mesp_restart_noos[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m164[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x40379559: [0;33mpanic_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40379521: [0;33mesp_system_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4037fd7d: [0;33mabort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x42008fb1: [0;33mapp_main[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/main/hello.c[0m[0m:[1;31m35[0m
+[0m--- 0x420142b9: [0;33mmain_task[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40379f69: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403796a9: [0;33mesp_restart_noos[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m164[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x40379559: [0;33mpanic_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40379521: [0;33mesp_system_abort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4037fd7d: [0;33mabort[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4200a359: [0;33mrandombytes[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/components/kyber/src/randombytes.c[0m[0m:[1;31m83[0m
+[0m--- 0x42008fb1: [0;33mapp_main[0m[0m at [0;32m/home/marcos/esp/kyber-esp32/main/hello.c[0m[0m:[1;31m35[0m
+[0m--- 0x420142b9: [0;33mmain_task[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40379f69: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403796a9: [0;33mesp_restart_noos[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m164[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/marcos/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

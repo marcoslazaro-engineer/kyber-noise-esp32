@@ -1,0 +1,1719 @@
+Command: /home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/marcos/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/marcos/esp/kyber-esp32/build/kyber-esp32.elf /home/marcos/esp/kyber-esp32/build/bootloader/bootloader.elf -m '/home/marcos/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/home/marcos/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (106) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (126) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (136) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (142) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (143) boot: Disabling RNG early entropy source...[0m
+[0;32mI (154) cpu_start: Multicore app[0m
+[0;32mI (163) cpu_start: Pro cpu start user code[0m
+[0;32mI (163) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (163) app_init: Project name:     kyber-esp32[0m
+[0;32mI (167) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (172) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (177) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (181) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (191) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (195) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (199) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (205) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (220) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (232) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (278) main_task: Calling app_main()[0m
+[0;32mI (278) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (278) KYBER: Seed:[0m
+1FE42B0CE71093F23E03FC974310C22E21ADFF33AFCC6020FEF89CF812CA69AC
+
+s: 1 1 1 2 -1 1 1 -1 -1 2 2 -1 -2 0 0 2 
+0 1 0 -1 -1 1 -1 0 -1 0 1 -1 2 -1 1 -1 
+-2 -1 2 -1 0 0 -1 -1 -1 -3 2 -2 1 1 1 -1 
+1 1 1 0 2 0 0 -1 0 0 0 -2 2 -2 -1 0 
+0 3 2 -1 -1 1 -1 0 2 -1 1 -1 0 1 1 1 
+0 1 1 0 0 0 0 0 -2 1 1 -1 1 -1 -1 0 
+-1 1 0 0 1 1 1 2 -1 0 1 2 -1 3 2 0 
+-1 0 2 0 -1 1 -1 1 0 0 0 -1 1 -1 0 -1 
+2 1 1 0 -1 0 2 1 1 0 0 0 0 0 0 -2 
+0 0 -1 0 2 -1 -1 -2 2 -1 1 0 -3 0 0 1 
+-1 -1 1 -1 1 0 -1 1 2 1 1 1 1 1 -2 -1 
+-1 2 0 -1 -2 3 0 1 0 0 -2 1 0 -3 -1 -2 
+0 0 -2 -1 0 1 1 2 1 -1 0 2 -2 -1 1 1 
+1 1 1 0 0 0 1 -1 0 0 0 2 0 -1 -1 -1 
+0 0 0 1 0 1 -2 1 0 2 0 0 -1 1 0 -1 
+1 -2 2 1 0 0 -2 0 0 -1 -1 -1 -1 0 -3 -1 
+
+
+e: -2 -2 -3 -1 1 -1 0 1 -2 -2 2 1 0 0 1 -1 
+0 0 -2 -2 -1 0 -1 1 0 1 -2 0 3 0 -2 0 
+0 0 0 0 -2 1 0 0 0 1 -1 1 1 2 0 -3 
+-2 0 -1 -1 0 0 2 2 0 -1 0 3 -1 2 1 -1 
+-1 -1 0 0 0 1 0 -2 0 0 0 -1 -1 -1 0 0 
+1 1 0 -1 -2 1 -1 2 3 1 -1 -1 1 -1 1 2 
+2 0 1 1 0 1 1 -1 2 0 1 1 -1 0 1 -1 
+1 1 2 0 1 1 0 0 0 0 -1 2 2 -3 -1 -1 
+1 -2 1 0 0 -3 2 2 0 0 0 2 0 2 1 -2 
+0 1 -2 1 -2 1 -1 1 -1 1 -1 0 0 -2 2 2 
+-1 -2 0 2 -2 -2 2 1 0 1 2 0 -2 0 1 1 
+-2 1 -1 0 0 -1 -1 0 1 -2 -1 0 1 0 0 2 
+-3 0 -2 -1 0 1 0 1 0 -1 0 1 -2 0 -1 1 
+2 -1 1 3 0 0 0 0 0 1 -1 -1 3 0 0 0 
+-1 0 2 1 0 -1 -1 0 3 -1 1 1 2 1 0 -3 
+1 0 -1 2 0 -1 -1 2 0 -1 -1 -1 2 1 1 -1 
+
+
+r: 1 -1 -1 0 -1 -1 2 -1 0 0 -2 -1 0 -1 3 0 
+-1 -1 -1 -1 1 2 1 0 0 1 -1 0 1 3 0 0 
+-1 1 0 -1 -1 1 -2 0 -2 -1 0 1 2 0 -2 0 
+-1 1 1 -1 0 -1 0 1 0 -2 2 1 1 0 -1 1 
+1 3 0 2 -1 -2 -1 0 2 0 0 1 3 1 -1 0 
+0 1 -1 0 3 -2 1 3 1 -1 2 0 -1 0 0 0 
+1 2 1 -2 -1 1 3 -1 1 -1 2 1 0 0 -1 -1 
+0 -3 0 -1 -1 1 1 -1 1 0 0 0 -1 2 0 1 
+-3 -1 1 -1 -2 -2 -1 -1 1 -1 1 0 1 -1 -1 0 
+2 -1 2 -1 -2 0 0 1 0 1 -1 1 0 0 -1 1 
+0 0 0 3 1 0 2 -1 1 -1 3 0 -2 0 1 2 
+0 0 0 1 -1 0 -2 -1 -2 -1 1 0 -1 1 1 -1 
+2 3 0 -1 0 1 1 0 0 0 1 2 0 0 1 0 
+-1 -2 1 3 -1 0 -1 -1 1 2 0 0 -2 -1 0 -1 
+2 -1 3 -1 1 0 1 -2 -1 -1 -1 0 1 -1 -1 -2 
+-2 0 0 0 1 0 1 1 2 1 -1 -2 1 1 1 -1 
+
+
+e1: 0 0 0 1 -1 -1 1 -1 -2 1 0 0 0 0 1 0 
+0 2 -1 -1 2 2 -1 0 0 0 -1 -1 0 1 1 1 
+-2 -1 1 2 1 -1 2 0 0 0 2 -1 0 -2 2 0 
+0 -1 -1 -2 1 -2 1 1 -2 -2 0 1 1 2 -2 -1 
+0 -2 1 1 0 0 -2 0 1 -2 1 1 -1 -1 -1 0 
+0 -1 0 0 -2 1 1 0 0 -1 0 0 0 2 -1 2 
+-1 1 0 1 0 1 -1 0 -2 -1 -2 -1 1 1 1 1 
+-1 1 -2 0 -2 -2 1 0 -1 0 1 2 0 1 2 1 
+0 0 0 1 0 0 -1 3 1 2 0 -1 -2 1 -1 -2 
+0 0 1 1 0 0 1 -1 1 0 0 0 0 1 1 -2 
+-1 0 3 1 -2 -1 0 0 2 -1 0 2 -1 -1 -1 0 
+0 -2 0 0 0 1 0 0 0 -2 2 -2 2 1 0 -1 
+0 1 -2 2 2 -1 0 0 1 0 0 1 0 -1 -1 0 
+-1 1 0 -2 -1 3 0 1 0 1 0 0 -1 -1 -2 0 
+-1 1 0 -1 -2 -2 -1 0 -1 0 -1 0 -1 0 1 -3 
+2 -1 -2 2 0 2 1 -2 1 0 -1 1 0 0 1 -2 
+
+
+e2: 0 -2 -1 1 1 0 -1 0 0 2 -2 0 -1 2 0 0 
+-2 -2 0 -1 3 2 0 0 1 0 0 2 -1 -1 0 2 
+-1 1 0 -1 -1 0 1 -2 -3 1 2 0 -1 0 0 -2 
+-2 -2 0 -1 1 0 0 -1 -1 1 1 -1 2 -2 -2 -1 
+-1 0 -1 1 -1 1 -1 0 -1 -1 -1 1 -1 -1 2 0 
+-1 1 0 2 1 -2 0 1 -1 0 0 -1 2 2 0 0 
+-1 -1 -1 -1 0 -1 -1 2 2 1 1 1 0 0 -1 -1 
+-1 1 0 1 -1 -2 1 1 1 1 -1 0 1 -1 3 2 
+0 -2 -1 1 1 -1 0 2 0 0 -1 0 -1 1 1 -1 
+2 -2 0 -2 1 -1 1 -2 0 0 -1 1 -1 -2 0 1 
+0 1 0 -1 0 -1 2 0 0 -1 1 1 -1 -1 -2 1 
+1 -1 0 1 0 1 -3 0 0 -1 1 1 -1 2 0 -1 
+-1 3 2 -1 1 -1 -2 1 -1 1 1 -1 1 0 0 -1 
+0 1 1 0 0 -2 -3 -2 1 -1 -1 0 0 3 1 1 
+-1 0 0 0 0 0 1 1 -2 -1 -1 -1 1 2 -1 0 
+-1 1 1 0 -2 0 1 2 -2 -2 -1 -2 0 0 -1 2 
+
+
+[0;32mI (558) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+AFE8DD4AD4090311210DF3AA98BEFD10E6319448519CDFACCA81D8E9BEF0957A
+
+s: -2 0 1 1 -1 0 -2 0 1 -1 -1 1 0 1 -1 0 
+-3 -1 -1 0 -2 0 -1 -1 0 2 -1 0 -1 -1 1 -1 
+-1 -2 2 2 1 2 -1 -1 -2 0 0 0 0 -1 1 0 
+-1 1 0 -1 0 -1 0 1 2 -1 0 1 1 -2 0 1 
+0 0 0 1 1 -3 -1 1 1 0 1 -1 1 1 1 -2 
+-1 2 2 2 -2 1 -1 0 0 -2 0 0 1 -3 2 2 
+-1 0 -1 1 -1 0 -1 -2 -1 -1 -1 0 -1 0 0 0 
+1 0 -1 -1 -2 0 2 0 1 -2 -3 0 -1 0 -2 0 
+2 2 1 1 0 1 0 -1 2 -1 -1 0 0 -1 -1 0 
+3 -1 1 1 0 0 0 -1 1 0 1 1 1 1 2 0 
+1 0 -3 1 1 0 2 -1 -1 -2 1 -2 1 -1 -2 2 
+1 0 1 1 2 0 0 -1 1 0 -1 1 -1 2 0 1 
+-1 -2 0 -1 1 0 0 0 2 2 -2 0 -3 0 -1 -1 
+-2 1 1 1 0 1 2 2 0 0 0 0 0 1 1 1 
+1 2 1 -2 0 0 1 0 -2 -2 1 -2 0 2 0 0 
+1 0 -2 0 -1 2 2 0 -1 -2 0 0 -1 2 2 0 
+
+
+e: 1 1 -2 0 -2 0 1 0 -2 0 -1 -1 -1 0 0 0 
+-1 0 0 1 1 0 -1 -1 0 0 -1 -1 1 0 1 0 
+-1 0 0 1 0 1 0 -1 1 0 1 2 -1 1 0 -1 
+2 0 0 2 0 -1 -1 1 1 1 0 0 1 2 -2 -2 
+0 -1 2 -1 0 1 1 -2 0 0 0 1 2 0 -1 1 
+-1 -1 0 0 2 1 0 0 -1 0 -2 0 0 -2 2 0 
+1 -1 2 -1 0 1 0 -1 1 -2 3 1 1 1 0 -2 
+0 1 1 2 1 0 -1 -1 0 1 2 -2 -2 -1 -2 1 
+-2 -1 2 1 0 -2 -2 0 0 1 1 0 1 0 0 -1 
+1 0 -1 1 0 -1 -1 0 -1 1 1 -1 -1 1 0 0 
+0 -2 0 0 0 -1 -1 0 -2 0 0 0 0 0 0 -1 
+0 -1 1 1 -1 0 0 1 1 -1 0 1 -1 0 2 -1 
+-2 0 0 -2 -2 2 0 -1 -2 -1 0 0 -2 0 0 1 
+2 -1 1 0 1 -2 1 1 1 0 -1 2 1 -1 -1 -2 
+-1 0 0 0 -1 1 -1 0 -1 1 0 1 2 -2 -1 1 
+1 0 -1 -1 -1 0 0 -2 -1 2 0 1 0 -2 0 -1 
+
+
+r: 0 0 0 0 2 0 1 0 0 0 1 1 2 0 1 0 
+-1 -1 -1 0 2 1 -1 -2 0 -1 1 -3 2 0 2 1 
+-1 -1 1 2 -1 -1 2 1 1 -1 1 -2 0 -1 0 1 
+2 0 -1 -3 0 -1 0 0 -2 -1 1 0 0 -1 0 -3 
+-1 0 -2 2 -1 0 0 0 -2 0 1 -1 -1 -1 -2 0 
+1 0 0 0 0 0 2 1 -1 0 2 1 1 1 -1 -1 
+-1 0 0 0 1 0 0 1 0 0 1 0 2 0 -2 -1 
+0 0 -1 -2 -1 1 -1 1 0 1 -2 2 -1 -2 -1 -1 
+-1 2 -1 -2 0 1 -1 1 0 -2 1 0 1 -2 2 -1 
+0 1 0 -1 -2 -2 3 0 -2 -2 -1 0 0 -2 0 1 
+0 -1 2 1 0 -1 1 0 -1 -1 0 1 -1 -1 3 2 
+1 -1 -1 0 0 -1 1 1 0 1 -1 1 1 0 1 0 
+-1 0 -1 0 -2 2 -2 0 -2 1 2 -1 2 -1 -1 -1 
+1 1 0 0 1 -1 1 -1 -1 -1 0 1 0 2 1 -2 
+1 0 -1 1 -1 -2 0 1 0 2 1 0 -2 1 0 -1 
+1 -1 1 0 0 0 -1 -2 0 0 0 1 1 0 -1 1 
+
+
+e1: -3 -1 2 1 -1 -1 0 -1 2 1 0 -2 1 -1 -1 2 
+1 0 0 0 -1 1 -1 0 1 0 1 1 -2 0 1 0 
+1 -1 -1 1 -1 1 1 1 -1 -1 2 -1 1 -2 -1 0 
+-1 1 -1 0 0 -1 0 0 0 -2 -1 0 -1 1 -1 0 
+0 -1 -1 1 2 2 -2 2 -1 0 2 0 0 0 -1 0 
+-1 -1 -2 -1 1 -1 1 0 1 0 2 -2 -1 -1 -1 0 
+2 1 -1 -1 0 1 -1 -2 0 -1 -2 1 1 0 -2 0 
+1 0 -1 -1 2 1 0 0 1 -1 0 -1 3 -1 1 1 
+-2 0 1 -1 0 -2 0 0 -1 0 0 0 -1 -1 -1 -1 
+0 1 -1 2 -1 0 -1 2 1 2 1 -1 1 1 -2 -1 
+-1 1 0 0 -1 -1 1 -2 0 -1 2 0 -1 -1 1 1 
+0 1 0 -1 3 1 -2 -2 1 0 -1 0 1 0 1 0 
+0 0 1 0 -1 -1 0 1 2 1 0 0 1 1 -1 0 
+-1 0 1 -1 0 -1 0 -1 -1 -1 0 0 1 -1 2 -2 
+0 1 -2 2 -2 1 -1 -1 -2 -1 -2 0 1 0 -2 -2 
+1 0 -1 2 -1 1 -2 0 1 1 0 1 2 -1 1 0 
+
+
+e2: -1 1 1 0 -1 1 1 1 -1 -1 0 -1 1 0 -1 -1 
+2 1 -1 1 0 -2 1 0 1 -2 -1 0 -2 1 1 -1 
+-1 -2 0 -2 1 0 0 -1 0 0 1 -3 3 0 0 2 
+-1 2 -2 -1 0 -1 -1 -1 -1 0 -1 -1 0 1 2 -1 
+0 1 1 -2 0 1 0 0 -1 0 1 -1 -1 -1 0 -1 
+1 -1 -1 0 0 0 -1 -2 1 0 1 0 3 0 0 1 
+1 0 2 1 1 1 1 1 -1 -1 1 0 -1 1 -1 0 
+0 2 1 -1 -1 0 2 1 2 -3 0 1 0 -1 0 0 
+-1 -1 0 0 1 -1 1 0 1 3 -1 0 2 2 1 -2 
+3 -1 -1 0 -1 1 0 1 -1 2 -2 2 1 0 -1 0 
+-1 0 1 -1 2 2 1 0 1 1 0 -1 0 1 1 -1 
+0 1 1 1 2 1 0 -2 0 -3 -2 1 2 -2 -1 2 
+-3 0 0 -2 0 0 1 0 0 1 0 1 0 1 1 -2 
+0 0 1 1 0 -1 -2 1 1 1 0 0 -1 0 -1 0 
+0 -1 0 1 0 0 2 1 -1 -1 3 -1 1 -1 0 0 
+2 1 0 -1 0 0 -1 0 0 0 2 1 -1 1 -1 1 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+C0E94C73C03584D20A4ED3E30D3B6D2535C43C6D6B91CF243C67DFC0A6EAF073
+
+s: 0 1 -1 1 -1 -2 0 1 -1 -1 -1 0 0 0 -1 0 
+-1 -1 2 1 0 -3 -2 -1 0 -1 0 0 -1 -2 -1 0 
+0 0 0 1 0 2 1 -2 1 0 1 0 -2 1 1 -1 
+0 0 -1 -1 1 0 0 1 0 0 2 -1 1 0 0 1 
+-1 0 2 -1 1 -1 0 0 0 -1 0 0 -1 -1 0 1 
+1 -2 0 0 1 -1 1 -1 1 1 -1 -1 -2 -1 0 -1 
+1 1 1 2 0 3 -3 -1 1 2 0 1 -1 -1 2 -1 
+-3 -1 0 1 0 0 0 -2 0 1 0 -2 1 2 1 0 
+0 0 2 0 0 -1 -1 1 2 0 1 -1 1 -1 0 2 
+1 0 -2 1 1 -1 1 1 -1 0 0 0 -1 0 0 -1 
+1 0 0 -1 -1 0 0 0 0 3 0 -2 -2 0 1 0 
+1 -1 -1 0 -1 0 0 1 2 -1 -1 1 1 2 -2 -1 
+0 -1 1 0 3 1 -2 0 3 -1 0 1 2 -1 -1 -1 
+0 0 -1 0 -1 2 2 0 -1 1 -1 -1 -2 0 -1 1 
+-1 -3 -2 1 -1 2 0 1 0 -1 2 1 0 -1 0 1 
+1 0 2 -1 1 0 -2 1 1 -1 0 1 -2 0 2 2 
+
+
+e: 1 1 -1 1 -1 0 0 -1 -2 -1 0 1 -2 -1 -2 1 
+-2 2 1 -2 -1 1 0 1 0 2 3 -2 2 2 1 -2 
+-1 -1 0 0 -1 -1 0 2 -1 2 0 0 -1 0 0 1 
+-1 0 0 -1 2 0 -1 -1 1 -1 -1 -1 -1 0 -2 1 
+0 0 0 -2 -1 0 -1 -2 -2 -1 0 0 1 1 2 -1 
+-1 -2 -2 1 -1 -1 2 0 1 -1 -1 1 -1 0 1 1 
+0 0 -2 1 0 -1 -3 -1 -2 0 -1 -1 1 -1 1 2 
+2 -1 0 -2 0 -1 -1 -1 1 -2 -1 0 -2 1 1 3 
+0 0 -1 1 -1 -2 2 0 0 1 -1 2 -2 2 2 -1 
+0 -1 -2 0 -1 0 0 1 1 0 -1 1 -1 -1 1 -1 
+2 -2 0 -1 -1 0 1 -2 2 -1 -1 0 1 -1 0 -1 
+-2 1 -2 0 0 -1 0 -1 -1 -1 0 -1 -1 2 0 0 
+0 -2 0 0 0 1 0 0 0 1 0 1 2 -1 -1 0 
+-1 1 1 1 -2 0 0 2 -1 1 0 0 1 0 0 0 
+1 0 1 0 -1 1 0 2 -1 -1 0 1 2 0 -3 1 
+-2 -1 0 -1 1 0 -2 -1 1 1 0 0 -1 -1 0 -3 
+
+
+r: 0 0 0 -2 -1 -3 1 2 1 1 0 0 0 1 -2 2 
+2 -1 -1 0 1 0 -1 1 -2 0 -2 0 0 0 1 0 
+2 1 1 -2 -2 0 2 0 0 1 1 0 -1 3 0 0 
+-1 1 1 0 1 0 0 2 -1 -1 0 -2 0 1 -2 0 
+-1 2 1 -1 -1 -2 -2 -1 1 -2 0 2 -1 -1 1 1 
+2 1 1 -1 1 1 0 0 -1 -3 2 2 -1 1 0 -1 
+0 -1 -1 0 -1 -1 0 1 0 1 -1 0 0 1 0 -1 
+-1 0 2 -1 1 1 -2 -2 1 -1 -2 0 0 2 0 1 
+-2 2 0 1 1 3 3 0 2 1 1 0 -1 -1 -1 -1 
+0 1 -1 1 -2 1 -2 -1 1 -1 0 0 -1 1 0 0 
+-1 0 1 1 1 1 2 -2 0 1 -1 1 0 0 1 2 
+0 0 1 0 0 -1 1 0 2 -2 1 0 -2 0 0 2 
+-1 0 2 -1 0 -1 2 -1 -2 2 1 -1 0 -2 0 1 
+0 2 0 0 -1 0 2 -1 0 -1 -1 -1 -1 1 2 -2 
+0 -2 -1 1 -1 0 1 0 0 -1 0 0 1 0 0 0 
+1 0 0 0 -1 -1 0 0 1 2 -1 0 1 0 0 0 
+
+
+e1: 0 1 -2 -1 0 -1 -1 0 0 0 -2 -1 0 0 -2 0 
+-2 -2 -1 0 2 1 0 -1 -2 -1 0 0 0 0 1 1 
+0 -2 1 2 0 -1 0 0 1 1 1 0 2 -1 3 0 
+-1 0 -1 -1 -2 2 2 1 -1 -1 1 -1 -1 1 1 0 
+1 2 0 -3 -2 0 -1 -1 1 0 0 0 -1 0 1 -2 
+-1 0 -1 0 1 2 0 -1 -1 -2 -2 -1 0 1 0 0 
+1 0 0 -1 0 0 0 0 -2 -1 -2 0 -1 0 -1 0 
+-1 -1 -1 -1 -1 1 -2 1 -1 0 -1 0 -1 1 -1 2 
+0 1 -1 0 1 2 1 1 0 -1 1 -1 1 1 0 -1 
+1 1 1 1 -1 -2 1 -1 0 1 1 2 2 2 1 0 
+0 -1 1 1 -1 1 -2 0 0 0 0 -2 1 -1 -1 -2 
+-1 2 1 -1 2 0 0 -2 -1 -2 1 0 1 0 0 1 
+0 1 -2 1 2 0 1 -1 1 1 1 -1 -1 0 -1 -1 
+-1 -1 0 1 -1 0 0 -1 2 0 0 -1 0 0 1 -1 
+-1 1 0 -1 -1 0 -1 1 1 2 1 -1 1 0 0 0 
+-2 0 1 -1 0 -2 -2 1 0 0 0 0 0 1 -2 -2 
+
+
+e2: -1 0 0 0 2 0 0 1 2 -1 -3 -2 1 -2 1 1 
+0 2 1 -1 0 -1 1 1 1 1 1 0 -2 1 -1 2 
+0 -1 1 0 1 0 -2 1 -1 -1 -3 -1 0 0 2 0 
+-1 -1 1 0 0 1 -1 0 -2 0 -1 -1 2 0 1 -1 
+1 0 -1 0 1 2 1 -2 -1 -2 0 0 1 1 -1 0 
+2 0 1 0 -1 0 1 0 1 2 -1 -1 0 -1 0 0 
+1 1 2 2 1 1 -1 0 0 0 0 0 -1 1 -2 -1 
+0 0 1 0 2 -2 0 -1 2 0 -1 1 -1 -1 0 0 
+1 -1 1 2 0 0 2 -1 -2 2 -1 0 2 2 -1 0 
+0 0 0 -1 0 -1 -1 0 -1 0 0 1 1 1 1 0 
+-1 -1 -1 0 1 2 0 0 -2 0 0 1 -1 1 -1 0 
+0 0 2 0 1 -2 -2 0 -1 0 1 -2 0 -1 1 0 
+-2 2 -2 0 -2 2 2 -1 0 1 1 1 2 -1 1 1 
+1 -1 -1 -1 1 -1 2 -3 -1 1 -1 0 1 -1 0 -1 
+2 -1 -2 0 -1 0 0 0 0 0 0 1 2 -1 1 1 
+-1 -1 -1 0 1 0 -2 1 0 -1 1 -1 -1 2 -2 0 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+B043367EB039E6D2138E4EEFAF49F178F248F780845FF25E092D4E34799DF114
+
+s: 1 1 2 1 0 1 2 0 0 -1 2 0 -1 -2 1 -2 
+-1 1 -2 -2 0 0 0 0 0 -1 0 1 -1 -1 -2 1 
+-1 2 -1 -1 -1 1 0 -1 0 1 0 1 -1 -2 -1 1 
+0 -1 1 0 0 0 0 1 -1 0 2 0 -2 2 -1 0 
+-1 -2 0 1 1 2 0 -3 -1 0 -1 -1 2 0 0 1 
+-2 2 0 1 2 -1 -2 0 0 0 2 1 -1 -1 0 -1 
+0 1 -1 3 -1 2 -1 0 1 -1 0 2 -1 -1 1 -1 
+1 -1 -2 -1 0 -2 -3 1 -2 0 -1 -2 1 -1 2 0 
+1 1 1 0 -1 -1 0 1 -1 -1 1 1 1 0 0 0 
+2 1 -1 0 3 -2 -2 2 0 2 -1 -1 -2 -2 1 0 
+-1 1 -1 0 1 -1 -1 2 0 0 1 0 -1 -1 0 0 
+-2 1 0 0 -1 0 -1 -1 -2 2 2 0 -1 1 1 -2 
+2 1 2 0 1 -1 1 2 0 1 1 1 1 -1 2 1 
+1 0 0 2 -1 2 -2 1 0 -1 -1 1 0 1 2 1 
+2 0 -1 0 -1 0 1 -3 0 -2 -1 -1 -3 1 -2 1 
+1 1 -1 1 0 3 -2 1 1 0 0 -3 1 -1 2 1 
+
+
+e: 1 0 -2 -1 2 1 0 1 -1 -2 1 0 0 0 1 0 
+2 -1 -1 -2 1 1 -1 -1 2 -1 1 1 1 0 -2 0 
+1 0 -1 1 -1 1 -1 1 -2 -2 1 -1 -1 0 2 0 
+-2 -1 -1 0 2 0 0 0 1 1 -1 2 -1 0 -1 1 
+0 -1 -2 0 -1 0 0 -1 1 -1 1 1 1 -1 2 1 
+1 -1 1 1 3 -1 1 0 -1 2 0 0 0 0 -1 1 
+0 -1 1 -1 -1 -1 -1 1 1 1 0 0 0 1 2 -2 
+2 -1 -2 1 0 0 -2 1 -1 -2 1 3 0 0 1 -1 
+0 -2 1 1 0 -1 0 1 -1 1 0 0 -2 0 1 1 
+1 0 1 -2 1 2 -1 1 0 0 -1 -1 2 -1 -1 0 
+1 0 0 0 0 -1 2 1 0 1 0 -2 0 0 1 1 
+0 -1 1 1 1 -2 0 0 2 0 -1 0 0 -2 0 0 
+-1 2 -2 2 2 0 0 0 2 -3 2 -1 -1 3 2 1 
+0 1 -1 1 1 0 -1 0 -1 1 0 1 0 -1 -3 0 
+-1 -1 2 1 2 2 -1 -1 -1 1 -2 -2 1 0 -1 1 
+1 -1 2 0 0 -1 2 1 0 0 1 1 2 0 0 0 
+
+
+r: 0 1 1 1 0 2 -2 -1 -1 0 0 -1 0 -1 -1 -1 
+2 0 -1 1 0 -2 0 -1 -1 -2 -2 1 1 1 0 -1 
+-1 1 -2 0 0 0 0 -1 -1 1 0 -1 -1 0 1 0 
+-1 0 -2 2 0 0 2 -1 0 0 -1 0 1 -1 1 0 
+-1 1 -2 0 -1 -1 1 1 2 1 1 0 0 -1 1 -2 
+-1 1 0 1 0 0 0 -2 1 1 0 -2 1 2 -1 3 
+1 0 0 0 1 0 -1 0 0 0 -3 0 1 -2 1 -3 
+0 2 0 0 -1 2 -1 1 -1 0 1 1 0 1 1 0 
+2 0 0 1 0 -2 0 1 1 -1 0 0 -1 -3 0 1 
+0 0 0 -1 1 -1 -1 -2 -1 1 1 -2 -2 1 -2 3 
+1 0 -2 1 -1 3 0 0 1 1 1 -2 -2 0 -1 -1 
+-2 1 -1 2 -2 3 0 0 0 -1 1 -1 1 0 -1 -1 
+2 0 2 1 2 1 -3 2 3 -2 1 -1 1 1 2 -1 
+0 0 0 2 2 0 1 0 -1 1 1 1 0 -1 0 1 
+0 1 0 -1 2 1 3 1 3 0 1 -1 1 1 2 1 
+-1 1 2 0 1 0 0 -1 0 0 -1 -1 -1 1 -1 0 
+
+
+e1: -1 0 0 1 -2 1 -1 -1 0 1 0 -1 0 0 1 1 
+-2 1 1 1 1 0 -2 0 2 0 -1 2 -1 -1 -2 0 
+0 1 -2 0 1 1 -1 0 0 1 1 -1 -1 0 0 0 
+1 2 1 0 -2 -2 0 0 -1 0 2 1 -1 -1 -1 1 
+2 0 -1 -1 1 0 -1 2 0 -1 1 -1 -1 1 0 1 
+1 -2 -1 1 0 0 2 -1 -1 0 2 2 -1 0 0 -1 
+-1 0 -2 -2 0 0 1 0 0 -1 -2 1 2 -2 0 1 
+1 0 -1 1 0 -2 -1 -1 -2 -2 0 1 -1 1 -2 0 
+1 0 -3 0 -2 -1 -1 0 0 0 -1 -1 2 2 -1 -1 
+2 1 0 0 1 -2 0 1 -2 -1 -1 -1 -1 1 1 0 
+0 1 0 0 0 -2 -2 0 -1 2 -1 -1 1 1 0 0 
+1 0 1 -1 -1 0 -1 0 0 -1 1 1 0 2 0 1 
+0 -1 0 -1 1 0 -1 0 -2 1 2 1 1 -2 1 -1 
+1 -1 0 1 3 0 0 0 0 -2 1 1 2 -2 2 0 
+0 0 1 -1 1 2 2 -2 -1 1 1 0 2 1 1 0 
+0 -1 -1 1 1 -1 1 1 0 0 -1 0 0 -1 1 -2 
+
+
+e2: 0 -1 -1 2 2 1 0 2 0 1 0 0 0 -1 -2 -1 
+-1 -1 0 -1 -1 0 2 -1 0 1 -2 1 -1 2 -1 3 
+3 0 -1 -1 -1 0 2 -1 0 3 0 0 1 2 -1 -2 
+0 -2 -3 -2 0 1 1 0 2 -1 0 -2 0 0 0 1 
+-1 0 1 1 -1 0 1 0 1 -1 -2 0 1 1 0 1 
+-1 -1 -2 -2 1 -1 -1 0 -2 1 -2 1 1 1 -1 0 
+-3 2 2 -2 1 -1 -1 1 0 1 0 -1 1 1 1 2 
+0 1 1 -1 -1 0 -1 0 -1 1 0 -1 0 3 0 0 
+-3 -2 3 1 1 1 0 0 1 -1 -1 0 -1 -2 1 0 
+-2 2 -1 -1 2 0 0 2 3 2 2 -1 0 0 -2 1 
+0 -1 1 1 -2 0 -1 0 0 2 1 0 0 -2 1 0 
+-1 -1 1 -1 2 0 1 -2 0 1 1 -1 0 -1 -1 2 
+-1 0 -1 1 -1 0 -1 -1 1 2 0 -1 -3 -2 0 2 
+1 1 1 1 -1 2 0 -1 0 1 1 0 2 1 -1 0 
+1 0 0 -1 0 0 1 0 2 -1 -1 -1 -2 1 -1 1 
+0 1 1 -1 1 -1 0 -1 2 -1 -2 -1 3 0 1 -1 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+CD158D811B8A6899C7B25A95D7FFFAB7BC0631743726F554BB4700B085A2BEBC
+
+s: 0 0 -1 -1 1 1 0 0 0 1 2 1 -2 1 3 2 
+0 3 0 0 1 0 0 3 1 1 1 -1 -1 -1 -3 -1 
+1 0 0 1 -1 0 -1 -1 -1 2 -1 0 -1 0 1 0 
+1 -1 -1 1 -1 -1 1 -1 -2 -1 1 1 1 0 0 -1 
+-1 2 0 2 0 -2 2 0 0 -1 -1 0 -2 -1 -1 0 
+-1 0 -3 0 0 0 -1 0 1 2 1 -1 2 -1 1 0 
+0 0 0 -1 -1 -1 1 -2 0 -2 -1 -1 1 0 0 2 
+3 -1 -1 1 1 -1 3 0 -1 0 0 0 1 -1 -2 2 
+1 1 -2 -1 0 1 -1 1 -1 -1 1 2 -2 -2 -1 1 
+2 -2 -2 0 1 -1 -2 0 0 1 -1 0 2 0 -1 2 
+-1 -1 0 -2 -1 0 0 1 1 -1 0 -1 -2 1 -1 -1 
+0 -1 0 3 -1 -1 0 2 2 1 0 -1 0 0 1 1 
+0 0 0 1 1 -2 -2 0 1 0 0 0 2 1 0 1 
+3 1 -1 0 1 -2 -1 1 0 0 0 0 1 1 1 0 
+1 2 -1 0 -1 1 1 -1 2 -2 -1 0 0 1 1 -1 
+-1 -1 0 0 1 0 -1 0 1 0 0 1 1 1 -1 1 
+
+
+e: 0 -1 0 1 1 1 -1 1 -2 -1 0 3 0 0 -2 0 
+-1 0 1 1 0 -2 1 -1 0 -1 0 -1 0 -2 1 0 
+-2 1 -1 1 3 -1 0 0 -1 2 2 -2 -2 0 1 1 
+2 -1 2 -1 0 -1 -1 0 -1 0 2 0 1 0 0 0 
+1 -2 1 -1 2 0 0 1 0 -2 -1 -1 -1 1 -1 2 
+-1 1 2 -2 0 -1 0 -1 0 0 -1 -1 -1 -1 1 -2 
+2 -2 -1 0 1 -1 1 1 -3 -2 -1 1 -1 1 0 -1 
+0 0 0 -2 0 1 0 -1 1 1 1 0 0 2 0 1 
+0 2 -2 2 -2 0 -1 1 -2 -2 -2 1 -2 -2 0 0 
+0 1 -1 1 -1 -1 1 1 0 -1 1 -1 -3 0 0 1 
+2 -1 1 1 -1 1 0 -2 -3 -1 1 0 0 1 1 0 
+-1 1 -1 -2 -1 -1 1 0 2 1 -1 -1 -1 2 -1 -1 
+1 1 2 1 0 -2 0 1 0 0 0 1 1 -2 2 -2 
+0 -1 0 0 -1 0 -1 0 -1 0 1 1 2 0 -2 3 
+1 1 0 0 0 0 2 -1 1 1 1 1 2 0 -2 1 
+-3 0 2 2 1 1 -1 1 0 2 1 1 -2 1 1 1 
+
+
+r: -1 0 1 0 -2 0 1 3 0 -2 0 -2 -1 -1 -1 2 
+0 3 0 0 0 1 2 -2 1 1 -1 0 1 1 -2 0 
+-1 -1 1 0 0 3 1 -2 -2 0 1 -1 2 1 0 1 
+0 0 1 1 1 0 -3 1 0 -2 0 2 2 1 1 -1 
+-1 1 0 1 0 -1 1 -2 0 0 -2 2 -1 1 0 1 
+-1 1 2 -2 -1 -1 0 -1 -1 1 -2 -1 1 -1 0 -1 
+0 0 1 2 1 -1 -2 -1 2 0 1 1 0 1 1 -1 
+2 -1 -1 0 0 2 0 -2 1 0 2 1 -2 2 0 -1 
+0 -1 0 2 0 2 1 1 0 1 -3 -1 -2 1 1 2 
+0 0 -1 -1 1 2 1 0 0 -2 -1 0 1 2 -2 -2 
+2 2 0 2 1 0 1 0 -1 -1 -1 0 1 -2 0 1 
+1 -1 0 -1 -1 0 -2 -2 0 1 2 1 2 1 2 -2 
+-1 0 1 -2 0 -1 0 -2 0 -1 1 1 0 2 -1 -3 
+0 0 0 1 1 1 0 0 -1 0 0 -1 2 1 2 0 
+1 0 0 -1 0 -1 2 1 1 -2 0 2 -2 1 -1 1 
+-2 0 1 -1 -1 -1 0 1 -1 0 -2 1 1 -1 -1 -1 
+
+
+e1: -1 0 2 -1 0 1 1 3 1 1 2 1 0 -2 0 0 
+-1 0 -1 -2 -1 -1 0 1 -1 -1 0 1 1 -1 -1 0 
+2 0 -2 0 -3 0 1 2 0 1 -2 -1 -1 -2 0 2 
+-1 0 -1 0 -1 1 -2 -2 -1 0 -1 -1 0 2 0 0 
+1 2 0 -2 2 -2 0 2 -2 -2 -2 -1 1 0 2 1 
+-1 -1 -1 0 1 1 -1 -1 1 0 0 1 0 0 0 0 
+1 0 1 0 0 1 0 2 1 0 -1 1 -1 0 0 0 
+-1 0 0 1 0 0 1 0 -2 0 -1 -2 2 -1 0 -2 
+-1 -2 1 -3 -1 0 -2 0 -1 1 0 -1 -1 1 0 0 
+0 0 0 0 0 -1 0 1 1 0 3 1 1 0 0 0 
+-1 0 -1 1 1 -2 2 0 -2 0 1 -1 1 2 1 1 
+1 -1 -1 0 1 -2 0 0 2 0 2 0 2 -1 0 0 
+-1 0 1 -3 -3 -2 -1 0 1 -2 -1 2 0 0 2 0 
+0 1 0 1 0 0 -1 1 2 2 -2 1 0 -1 0 -1 
+1 -1 0 2 -2 0 -1 -1 -1 -1 -1 -1 -1 3 0 -1 
+-3 -1 0 2 -2 1 0 -1 -1 1 0 -1 0 0 0 0 
+
+
+e2: -1 1 1 0 -1 -2 1 2 1 2 -1 -2 -3 1 0 1 
+-1 -2 1 0 0 1 0 0 0 -2 1 -1 0 1 0 1 
+0 0 0 -3 1 0 3 1 1 0 2 0 0 -3 0 -1 
+2 0 0 0 0 -1 1 -1 0 -1 1 -2 2 1 -2 -1 
+1 0 1 3 -1 0 1 -1 -1 -1 -1 -1 2 -1 0 -2 
+1 0 0 -1 1 1 0 1 -1 -3 -1 -1 0 -1 0 2 
+2 -2 0 1 0 -2 1 -1 0 1 -1 1 0 -2 1 -1 
+1 2 -2 1 0 -1 -2 1 0 -1 -1 -1 -1 -1 2 0 
+1 0 -2 0 1 1 0 -2 2 0 2 0 -1 1 -1 -1 
+1 0 1 -2 0 0 2 -1 0 1 -1 1 1 -2 -1 -2 
+-1 -2 2 -2 -1 0 -2 -1 0 2 -1 1 1 2 0 -3 
+0 1 0 0 2 0 1 -2 -1 2 1 0 2 -1 -1 0 
+0 1 0 2 -1 2 -1 -1 -1 -1 -2 1 0 0 0 2 
+1 1 1 2 0 0 -2 3 2 -1 -2 2 1 2 -1 1 
+2 1 2 1 0 1 -1 0 -1 -1 0 0 -1 0 1 -2 
+0 0 2 1 0 1 0 2 0 0 1 0 2 1 -2 1 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+103F257E07E4DE5E9A1E21C5A164DC653CC3288F93657A144F5938EA2B72B71F
+
+s: 0 -1 -2 -1 1 2 -1 0 -3 0 2 2 -1 -1 0 0 
+-1 0 -2 0 1 1 3 -1 0 -2 1 0 1 1 0 0 
+1 -1 0 0 0 0 0 -1 1 0 -1 1 0 1 2 -3 
+-2 -1 0 0 0 0 1 -1 0 0 0 0 -2 1 0 1 
+0 1 -1 0 -1 0 0 0 1 2 -2 0 0 1 -2 0 
+0 1 0 0 0 1 0 -1 0 1 2 0 0 -1 0 2 
+0 0 -3 -3 -1 1 -1 0 0 0 -1 -1 0 0 -1 0 
+0 2 0 2 1 0 1 2 1 0 -2 -2 1 -2 -1 0 
+1 -2 -2 1 1 0 1 1 1 1 -1 0 0 1 -1 -1 
+-1 0 0 0 0 1 2 -1 -2 -2 2 0 1 2 -1 1 
+1 -2 0 0 1 0 1 0 1 0 0 -3 -1 -1 2 0 
+-3 -1 -2 1 -2 0 0 -1 -2 0 -1 1 -1 -1 -1 0 
+3 0 0 0 0 1 1 -2 2 -2 0 0 1 1 -1 0 
+2 0 -1 0 -1 0 1 2 1 -2 0 0 1 0 -1 0 
+0 -2 1 0 1 1 -2 0 -1 -1 -1 -2 3 0 0 1 
+1 0 -2 0 0 -1 0 -1 1 0 1 2 2 -3 0 1 
+
+
+e: 0 -2 1 -1 -1 0 -2 1 1 1 -1 -1 0 2 0 1 
+2 -1 0 -1 2 3 2 0 -1 0 0 0 1 -1 -2 -2 
+1 0 1 0 0 0 0 1 1 0 -2 0 1 1 -2 2 
+1 1 0 -1 1 1 0 0 0 2 1 -1 0 2 -1 -2 
+-1 0 -1 1 0 0 -1 1 0 0 -1 1 0 -1 1 -1 
+1 0 -1 -1 2 -1 0 1 1 1 0 -1 0 -1 1 0 
+-1 0 -1 1 2 -2 -1 2 0 -2 -1 -1 -1 1 0 3 
+-1 0 0 0 1 -2 0 1 -1 1 2 -1 0 -2 2 2 
+3 0 1 -2 -2 0 0 0 -1 2 -1 0 0 1 0 0 
+0 -2 -1 1 2 -2 1 0 0 1 -1 -1 0 0 2 0 
+-1 1 -1 0 -2 -1 1 0 2 1 -2 1 -1 0 2 -1 
+1 0 -1 1 -2 -2 0 0 2 0 1 1 -1 0 2 0 
+-3 -3 0 0 -1 -2 1 -2 -2 0 -1 -1 -1 0 1 -1 
+2 0 -1 0 1 1 0 0 -2 1 0 0 1 -1 0 0 
+1 0 -1 1 0 0 1 0 -1 1 2 -1 1 2 -2 -1 
+1 0 0 0 1 1 1 0 -2 0 1 -1 3 1 0 0 
+
+
+r: 1 1 -1 1 1 0 2 1 0 1 0 1 1 1 2 0 
+1 3 1 1 -1 2 0 0 1 -1 -1 -1 1 0 1 -1 
+-2 0 1 0 -1 2 -1 -1 1 0 1 -1 0 0 -1 1 
+-1 0 0 -1 1 0 -1 0 0 -2 -1 0 0 1 2 0 
+0 1 -1 0 -2 1 1 0 0 1 0 -2 0 1 -1 0 
+0 -1 0 3 -2 0 0 1 -1 -1 1 1 0 -1 0 -1 
+0 0 0 -1 -2 2 0 -2 1 -1 1 -1 1 -1 1 0 
+1 1 1 -1 1 1 0 -1 1 0 1 -1 1 3 -2 -3 
+0 2 -2 0 -1 0 0 0 -1 2 0 2 -2 0 2 2 
+0 1 2 -1 1 1 -1 0 1 -1 -1 -1 0 0 0 1 
+-1 0 0 -2 -2 1 0 1 0 0 -1 -2 0 -3 1 -1 
+-1 -1 0 0 -2 1 1 -1 0 0 0 0 1 -1 1 -1 
+-1 1 1 0 -1 -1 1 -1 -1 -1 -1 1 0 -1 -1 0 
+-3 0 -2 -1 0 1 0 0 2 -1 2 1 0 -2 -1 1 
+1 0 0 2 -2 0 -1 0 2 1 -1 0 2 -1 1 -2 
+-2 0 0 0 -1 0 0 1 0 0 1 -2 1 1 1 1 
+
+
+e1: 0 0 -2 0 0 -1 0 -1 -2 -2 -2 -1 0 -1 0 1 
+-3 2 -1 1 -1 -1 -1 -2 1 1 -1 3 -1 0 0 -1 
+1 1 1 2 1 -1 0 -1 0 1 -1 1 -1 1 0 -1 
+0 1 0 1 0 0 1 0 1 1 0 0 0 0 -2 -1 
+-1 1 1 2 1 -1 1 1 1 1 -1 -1 1 -1 1 2 
+-1 -1 -1 0 -1 0 2 1 0 0 1 2 1 -2 0 -2 
+0 -1 2 0 0 -1 0 0 -1 2 0 -1 -1 -3 1 -1 
+1 -1 2 -2 -1 1 2 0 -1 -1 -1 1 1 0 0 0 
+-1 0 2 -2 0 0 1 1 -2 0 2 2 -1 -2 0 -1 
+-1 -1 1 2 -1 0 1 0 -1 -2 1 -1 0 0 0 1 
+-1 0 0 0 -1 1 2 0 -2 -1 2 -1 0 0 2 -1 
+-3 0 -1 0 -1 -1 -2 1 -1 0 0 -1 1 0 0 1 
+-2 -1 -1 1 1 0 -1 0 2 -2 -2 1 1 -1 0 0 
+2 0 1 2 1 1 0 -2 0 -3 0 0 -2 0 0 -1 
+-2 1 2 -1 -1 0 0 1 -1 1 1 -2 -1 -1 0 1 
+-1 -1 0 0 -2 0 -1 1 3 1 3 -1 3 1 -1 2 
+
+
+e2: -1 -2 0 -2 -2 1 0 -1 0 2 0 2 1 -1 -1 -1 
+-1 1 1 -1 0 1 -1 1 -3 0 1 0 -1 0 0 -1 
+0 -2 0 -1 -1 -1 1 -3 0 1 0 1 1 -1 2 1 
+-2 0 1 0 1 -1 0 1 2 1 1 -1 -1 0 1 0 
+-2 2 -2 1 0 0 -1 1 2 -1 0 -1 1 0 2 1 
+0 0 0 -1 -2 -1 0 2 1 2 -1 0 -1 -2 0 -1 
+-1 0 0 0 1 1 -1 -2 0 3 -1 0 0 0 1 0 
+-1 -1 0 -2 0 0 1 1 0 0 -1 -2 1 -1 1 -2 
+-1 -1 -1 1 0 1 0 -2 0 -2 -1 -1 1 1 -1 -3 
+2 0 1 -1 -1 -1 0 2 2 0 1 1 -1 1 -1 -1 
+1 -1 -2 1 -1 1 -1 -1 -1 3 -1 -2 -1 1 0 -1 
+0 0 0 0 2 -1 1 0 1 3 0 0 1 0 1 -1 
+0 -1 0 1 -1 0 1 -2 1 -1 -1 1 0 0 2 1 
+-1 0 -2 2 1 0 1 1 2 -1 0 1 0 0 -1 0 
+1 0 2 -3 -2 2 1 0 -1 1 -2 -2 -1 1 1 -1 
+0 1 0 -1 1 1 0 -2 0 -1 0 -2 1 -2 0 -2 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+225E2AAF53565A5EC591C3860F092041661FC638B9E9BDD2D604798C13E4A9FF
+
+s: -1 0 0 0 -2 0 0 -1 -3 0 0 2 1 1 2 2 
+2 -3 -1 1 0 0 0 -1 0 -3 -1 -1 -1 1 -1 0 
+0 1 -2 0 -1 0 0 3 -1 0 0 0 -1 -1 -1 0 
+0 0 0 0 -1 2 -1 2 0 0 0 -1 0 1 0 -1 
+2 2 1 1 1 0 -1 1 0 1 -2 0 -1 -1 -2 -1 
+-2 -3 2 0 -1 0 1 0 0 -1 1 3 1 -2 -1 0 
+2 0 -1 0 0 0 -1 -1 -2 0 2 -1 0 -1 -1 0 
+-2 1 0 0 -1 0 -3 0 0 1 0 3 0 -1 0 2 
+-1 1 -1 -1 -2 3 0 1 1 -1 0 2 -1 2 1 0 
+-1 2 -1 0 1 0 1 0 1 0 0 -1 1 2 1 0 
+-2 2 0 0 0 -1 0 1 2 0 0 -1 2 1 0 1 
+0 2 2 1 -3 1 -1 0 -1 2 0 -1 0 0 0 0 
+2 0 -1 1 1 0 -1 2 -1 2 0 -1 -2 1 0 1 
+-3 -2 0 0 1 -2 1 1 1 2 2 0 0 -1 0 -1 
+-1 1 -1 0 -1 2 1 1 2 0 0 2 2 0 -1 -1 
+-3 0 2 0 0 0 0 -2 1 1 -1 -1 2 0 0 0 
+
+
+e: 2 1 2 1 -1 1 -1 1 -3 2 -1 -1 1 -1 0 0 
+0 0 0 1 0 -1 0 0 0 1 -1 2 0 2 2 1 
+-1 0 -1 0 1 -1 0 1 2 -3 2 -1 1 -1 -1 1 
+-1 -1 -1 -1 1 2 0 1 -2 1 0 -1 -2 -2 -2 0 
+-1 2 0 0 2 1 -1 0 -2 1 1 -1 0 1 2 -1 
+1 1 0 2 2 0 -1 0 0 -3 -2 0 -2 -1 -1 0 
+-1 0 0 0 0 1 -1 0 -1 1 0 1 -1 2 0 1 
+1 1 2 -1 1 1 0 2 2 2 -1 0 -1 0 1 0 
+0 1 0 1 1 1 -2 -2 -1 0 1 0 -1 -2 1 1 
+1 -1 -1 -2 -2 0 0 1 0 1 -1 0 2 -1 -1 2 
+-1 0 2 2 1 2 -2 1 0 0 1 -2 1 -1 1 1 
+-1 1 0 0 -1 -2 0 2 0 2 2 0 -1 2 -1 0 
+-1 2 1 -1 1 -1 0 -2 0 -1 0 0 -1 0 -2 -1 
+0 0 -1 2 0 2 -1 -2 0 0 -1 1 0 0 -1 -1 
+-1 0 0 1 0 -1 0 0 -3 2 0 -1 2 2 2 0 
+0 1 1 0 2 -2 0 0 -1 1 0 0 0 0 1 1 
+
+
+r: 0 -1 -2 -2 -1 0 -1 0 1 3 0 -1 0 -2 2 1 
+2 1 0 2 0 1 0 0 1 1 0 0 0 1 1 0 
+-1 -1 0 -1 -2 1 -1 1 -1 3 -1 1 2 0 0 0 
+0 -1 1 1 -1 -2 1 1 1 0 1 2 0 -1 0 -1 
+0 0 -1 0 0 -1 0 1 1 1 -1 1 -1 -1 -1 0 
+-1 -1 0 -1 2 1 -1 1 1 2 -2 3 -2 1 -1 0 
+0 -1 1 0 -1 -1 1 0 2 -1 0 0 0 0 2 -1 
+0 0 0 1 0 2 -1 -1 0 0 -1 1 0 0 1 -1 
+0 0 0 0 1 -1 1 1 0 1 -1 -2 1 0 0 0 
+1 1 1 1 2 -1 -3 -2 1 0 1 1 -2 -2 -2 -3 
+2 0 -1 -1 0 -1 0 0 2 -1 -1 -2 1 -2 -1 -1 
+0 2 1 0 2 0 0 -1 -2 0 1 -1 1 -2 0 2 
+-1 2 -2 -2 0 -2 1 0 -1 0 2 1 0 -2 0 1 
+0 -1 0 2 0 -1 0 -1 -2 -1 2 1 -1 -3 1 2 
+0 -1 0 1 1 2 1 -1 -1 1 2 -1 2 2 -2 1 
+0 1 0 1 1 0 0 1 1 0 0 -1 0 -2 0 1 
+
+
+e1: 0 -1 1 2 -2 0 -1 1 -1 -1 2 1 -1 -1 -1 -2 
+-1 0 -1 2 0 -1 -1 -1 -2 0 0 -1 0 -2 1 1 
+-1 -1 1 0 0 -1 -1 1 2 -2 0 -1 1 -3 -1 -1 
+2 -1 1 -2 0 -2 0 -2 1 3 1 0 -1 -1 0 -1 
+0 1 0 1 -2 0 2 0 0 -2 2 -2 -1 0 1 0 
+1 2 -1 0 0 0 0 2 -1 0 1 1 0 -1 2 -1 
+0 -2 0 -1 0 2 -2 -1 -2 0 2 0 1 -1 1 1 
+0 -2 1 -1 -1 0 2 -3 0 1 0 -1 0 0 -1 -1 
+1 -3 3 0 0 -1 -1 -1 -1 -1 0 2 2 0 -1 0 
+0 -1 -1 -2 0 -1 0 -1 2 0 0 2 1 1 -1 1 
+0 0 0 0 3 2 -2 0 1 2 -1 1 -1 1 1 0 
+0 -1 -1 0 -1 -2 2 -1 2 -1 0 1 -1 -1 -1 -1 
+-2 1 0 1 0 -1 -2 1 2 1 2 1 1 0 0 0 
+-1 -1 1 0 1 2 0 3 1 -1 -1 -1 -1 0 0 -1 
+2 3 0 0 -1 3 -1 -2 0 2 -2 0 2 -1 -1 -1 
+-1 2 1 -1 2 0 0 0 1 -2 0 1 0 2 -1 -1 
+
+
+e2: 1 -1 -2 1 0 0 1 2 -1 0 1 2 1 1 2 1 
+0 -1 -1 0 1 0 -2 0 0 1 0 0 -2 0 -1 0 
+0 0 -1 1 -2 0 0 1 -1 0 0 0 -1 0 0 0 
+-2 1 -1 0 0 -2 0 1 1 1 2 2 -1 1 -1 1 
+0 -3 2 0 -3 0 -3 -2 3 -1 -1 1 0 -1 -1 -1 
+-1 -1 0 1 -1 0 -2 1 0 -1 1 0 2 0 -2 1 
+-1 0 1 -1 -1 -1 2 1 2 0 2 0 1 -2 0 2 
+1 2 -2 -1 0 0 -1 1 -1 0 -1 2 -2 2 -1 -2 
+0 2 1 0 -1 0 1 -1 0 3 2 -2 1 0 -2 1 
+0 0 0 -1 0 1 1 1 0 1 0 0 -1 3 1 -1 
+-1 1 1 1 0 -2 0 0 0 1 0 1 0 2 0 1 
+2 -2 0 1 0 1 0 1 0 2 1 -3 0 0 0 -1 
+-2 0 -1 2 0 0 1 0 1 0 0 -1 0 -1 0 1 
+3 -2 1 -2 0 -2 1 1 -1 1 -1 0 0 1 2 0 
+-1 2 -1 1 -1 1 -1 0 1 1 0 -1 1 0 -1 1 
+-1 0 1 -1 2 -1 0 0 0 1 -1 1 2 -2 1 -2 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+3822C82F18448486542632A841992A2CBE03CD6C2D6EC7EC5848E7F3CBE0F410
+
+s: 0 1 -2 -1 1 0 0 -1 2 0 -2 0 -1 0 2 -3 
+-1 1 1 -2 -1 0 -1 2 -1 2 0 -1 2 1 2 0 
+0 -1 1 0 0 0 1 -2 -3 -1 2 0 -1 1 1 -2 
+0 1 -2 0 2 0 1 -1 -2 0 0 1 0 1 1 1 
+1 2 -2 -2 0 -1 1 0 0 2 -1 -1 1 1 -2 -1 
+0 -1 0 -1 1 0 2 0 -1 0 -1 1 0 0 1 0 
+2 1 -1 2 1 1 1 0 -2 0 2 0 0 -1 2 -2 
+-1 -1 -2 1 3 -1 -1 1 -2 1 1 0 0 -1 0 -1 
+3 1 0 1 -3 0 -1 -2 1 -2 0 2 0 -1 -2 0 
+1 1 -1 1 3 -2 2 -1 -2 2 -1 1 1 0 -1 -1 
+-1 1 -1 0 -2 1 1 -2 -1 1 -2 2 1 1 -1 -1 
+2 0 0 0 0 1 1 0 0 -2 1 -1 0 0 1 0 
+0 0 1 2 1 0 -3 -1 2 -1 0 -1 1 0 0 -1 
+3 -3 0 -1 -1 1 2 1 2 -1 1 2 0 1 0 -1 
+0 1 0 2 1 1 0 -1 1 -1 0 1 0 1 0 1 
+0 1 0 0 0 1 0 -2 2 0 2 1 -2 2 2 -1 
+
+
+e: 0 -1 -1 -1 0 -2 0 2 2 -1 1 0 3 -1 -3 -3 
+0 -1 -2 1 0 0 0 -1 0 -2 0 1 1 1 2 2 
+1 -1 -1 -1 0 3 1 -1 2 0 1 0 -1 -1 0 -3 
+-1 -1 1 -1 0 0 -1 0 -1 1 2 1 0 1 -1 -3 
+-1 -1 2 -2 -1 -1 1 -1 -2 1 0 2 2 1 -1 0 
+0 0 -1 2 -1 1 2 1 2 1 -1 -1 -1 1 1 1 
+0 -1 2 0 -1 -1 -1 0 0 0 -1 2 1 -1 -1 -1 
+1 -1 0 -1 -2 -1 -2 -2 2 1 0 1 -1 1 0 1 
+1 0 2 -1 -1 1 1 -1 -1 -1 2 0 -2 -1 0 1 
+-2 1 -2 -1 0 -1 1 -2 -2 0 1 1 0 -1 0 -1 
+2 0 -1 -2 -1 -1 -1 -1 1 0 2 0 0 -2 0 -1 
+0 -1 0 0 1 0 1 1 1 2 1 0 0 2 0 0 
+0 2 0 1 -2 -1 0 -2 1 2 2 -2 0 1 1 -2 
+-2 1 0 -2 -1 -1 0 -1 0 0 -2 -3 -2 3 2 -2 
+1 -2 -1 0 2 0 -2 -2 1 0 0 1 -1 0 -1 0 
+-1 0 1 1 0 0 1 -2 0 1 0 -1 0 1 -1 -2 
+
+
+r: 0 1 -1 0 0 1 0 0 2 -2 0 -1 1 -1 0 0 
+0 0 2 0 -2 1 1 0 0 0 -2 1 -1 0 -1 -1 
+0 1 1 2 -2 -1 0 1 1 0 0 -1 1 1 1 -1 
+1 -1 -1 -1 0 0 -2 -1 1 2 -1 -1 1 0 -1 1 
+1 1 2 1 -2 2 1 -1 -2 1 1 -1 -1 0 0 2 
+-1 -2 1 -1 -2 0 1 1 -1 0 2 -1 -2 -1 -1 0 
+-1 1 -1 -1 -1 -1 1 -1 -1 -1 1 1 1 -1 1 1 
+0 0 1 1 -2 0 0 0 0 0 0 0 -3 0 -1 2 
+0 2 -2 -1 0 1 0 -1 1 1 1 2 -3 2 -1 -1 
+2 0 0 0 0 -1 0 1 3 0 1 2 -1 1 0 1 
+0 -1 1 -1 1 1 1 -1 0 1 0 -1 -1 -1 -1 -1 
+0 0 0 1 -1 3 1 0 -1 1 1 1 -1 0 -1 2 
+2 1 -1 1 0 -1 -3 -1 1 -1 -1 0 1 1 -1 -3 
+0 -2 1 0 1 1 2 1 2 0 -2 -2 0 -1 0 0 
+2 2 0 1 0 -1 1 0 0 -2 2 -1 -1 1 0 0 
+0 0 1 0 -1 -1 -1 1 -3 -1 0 0 0 0 0 1 
+
+
+e1: 0 -2 0 1 -2 0 1 1 0 -1 1 1 2 1 -1 0 
+0 0 -1 -1 1 1 -1 0 0 0 2 0 2 -1 -2 2 
+1 -1 -1 1 0 1 -1 1 0 0 0 0 -1 0 1 1 
+0 -2 1 -1 -1 1 1 0 0 -1 0 0 1 -3 -1 -1 
+0 1 2 0 1 0 2 0 2 0 -1 -1 1 -2 0 1 
+0 1 1 1 0 0 0 0 0 1 -1 1 -1 0 -2 -1 
+1 0 -1 1 -1 0 0 -1 -1 2 -3 -2 2 0 0 -1 
+-2 0 -1 1 1 2 -3 1 1 -1 2 0 1 -3 1 0 
+1 -1 -2 -1 -1 0 -2 1 0 -2 2 -1 -1 2 -2 0 
+-1 1 0 2 -1 0 0 1 0 2 0 0 0 -1 3 1 
+-2 0 0 2 -1 0 0 0 1 0 1 -1 -1 0 0 -1 
+3 2 0 1 0 1 1 1 1 2 0 0 -3 2 -3 1 
+-1 -1 0 0 1 1 0 -1 0 0 1 0 2 2 2 -3 
+-1 0 -1 0 -2 -1 -1 1 -1 -1 1 0 0 -2 0 -1 
+0 -2 1 3 -1 0 0 -1 1 1 -1 -1 -2 0 1 0 
+0 -2 1 0 0 1 0 0 -1 0 2 1 0 1 3 0 
+
+
+e2: 0 0 0 0 1 0 2 1 0 1 -1 -1 1 0 -1 3 
+2 3 2 2 -1 1 0 0 -1 -1 -1 -2 2 1 0 -2 
+0 0 0 2 1 0 1 -1 -2 1 -1 1 -1 2 0 0 
+3 0 0 0 -1 0 -2 2 2 3 0 1 1 0 -1 1 
+0 3 0 0 -1 0 -2 0 0 -2 0 -2 2 1 -1 -1 
+0 -1 -2 -1 0 0 0 2 0 1 1 0 -1 -1 0 1 
+1 1 0 0 1 1 -1 -1 0 1 3 1 1 -1 0 1 
+0 1 -1 0 -1 1 -1 -1 -1 2 -2 0 -2 2 1 1 
+-2 -3 -2 1 0 1 -3 0 1 1 -1 1 3 -2 2 2 
+0 1 1 -1 3 1 0 -1 1 -1 1 0 1 1 0 -1 
+1 1 3 0 -1 1 -1 0 2 -1 1 -1 -1 1 -2 1 
+0 2 2 -1 -1 -1 -2 1 3 -1 1 0 1 0 3 1 
+1 2 2 -1 0 -2 1 0 1 -2 2 1 0 -1 -3 -2 
+-1 1 0 1 1 1 0 1 1 -1 1 0 0 -1 0 0 
+-1 1 0 -1 0 1 -1 -1 1 2 1 1 1 3 1 -1 
+1 -2 1 0 1 1 -2 1 0 0 -2 1 0 -2 0 -1 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+FD1606F2ACD0361B5E666973352ABB573A8F5859054382C90178CCEEDC6F503A
+
+s: 1 1 -3 -1 0 -2 1 -1 0 0 1 1 -1 1 -1 -1 
+1 1 -3 0 0 -1 -1 1 -1 2 -1 0 2 2 1 0 
+2 0 -1 0 2 1 2 2 1 -1 2 2 2 1 -1 0 
+0 0 0 -3 -1 0 0 -1 -1 2 -1 0 -3 0 -1 -1 
+0 1 -1 0 2 -2 1 0 0 1 0 1 0 0 1 -2 
+1 2 -1 1 -2 1 0 0 1 -1 3 0 1 0 0 0 
+1 -1 1 1 -1 3 1 0 -2 1 0 -2 1 -1 -1 2 
+-1 0 -1 1 1 1 2 1 1 0 1 -2 0 1 2 0 
+1 0 1 1 0 -1 0 1 0 0 2 1 -2 1 -1 -2 
+2 1 0 1 2 2 1 1 1 1 0 -2 -1 2 0 0 
+0 1 1 0 0 -1 0 1 0 -2 0 0 1 1 3 1 
+-2 0 1 1 1 1 -2 0 -1 1 0 -2 1 -1 0 2 
+0 -1 2 1 -2 -1 -1 -1 1 0 0 0 -1 -1 0 -1 
+0 0 2 0 2 0 1 -1 -1 0 0 -1 0 1 0 -2 
+0 0 -1 -1 2 2 2 0 0 -3 0 0 2 -1 0 -2 
+2 -2 0 3 0 0 -2 1 -2 -1 -3 1 1 0 -1 1 
+
+
+e: 1 0 0 0 -1 0 1 2 1 1 -1 -1 -1 -1 -1 1 
+-3 2 -2 1 -1 0 -1 1 1 -2 -2 0 1 0 0 1 
+0 -1 -1 0 0 0 -2 1 0 -1 0 -1 -1 3 -1 2 
+0 -1 0 -1 -1 2 1 0 0 1 0 1 -1 1 0 -1 
+0 1 -2 1 1 -1 -1 0 1 1 0 0 1 -1 0 -2 
+1 0 2 -1 0 -1 -1 1 -1 -1 -1 1 2 -1 -1 -1 
+1 1 -1 0 0 1 1 1 1 -1 0 -1 -1 0 -1 2 
+0 1 1 0 0 1 -1 -1 -1 0 1 0 -1 0 2 0 
+0 -3 1 0 -2 2 0 -1 1 1 -1 0 0 -1 0 -2 
+-1 2 2 0 0 1 1 0 -1 2 0 1 1 0 0 -2 
+3 -2 -1 -2 1 2 -1 0 -2 0 -1 1 0 0 0 -2 
+1 0 0 0 0 0 -2 -2 1 1 1 0 0 -1 0 -1 
+1 -2 1 1 1 0 0 -1 -2 2 1 1 0 -2 -1 -1 
+1 1 2 1 1 0 1 0 0 1 0 1 -1 0 3 0 
+-1 1 0 -2 2 -2 -2 2 2 -1 3 1 1 1 0 0 
+0 1 2 0 0 -2 1 -2 2 0 -1 2 -1 -3 0 -1 
+
+
+r: 0 0 -1 0 -3 -2 0 0 1 1 0 0 1 -1 0 -1 
+0 1 0 1 -1 2 -2 2 1 -1 -1 1 -2 -2 1 1 
+-2 -1 -2 0 -1 -1 0 -1 1 -2 0 0 0 -1 2 0 
+-3 1 1 1 0 0 0 -1 0 -1 3 0 1 -2 -1 -3 
+2 -1 0 -1 0 1 1 1 -1 -1 3 -3 0 1 0 1 
+0 1 0 1 -3 -1 -2 0 -1 -3 0 -2 0 0 0 2 
+-3 1 -1 0 -1 1 0 0 -1 -1 1 0 -1 0 -1 3 
+-2 -1 1 -1 1 0 0 -1 0 0 -2 1 1 2 -1 -1 
+0 -1 1 2 1 2 -1 2 0 -1 -3 0 2 -1 -1 0 
+0 0 -1 0 1 1 0 0 0 1 0 2 1 1 -1 -1 
+1 -1 2 1 2 0 0 -1 1 0 2 1 -1 0 0 0 
+1 1 -2 2 2 0 1 0 0 -3 -1 1 0 0 1 1 
+2 -1 1 -2 -1 -1 -1 1 2 1 1 0 -1 1 0 -2 
+0 0 -1 1 0 1 0 0 1 0 -1 -1 1 0 -2 -1 
+0 0 2 0 0 0 0 0 -1 -2 1 0 3 0 -2 -1 
+3 -1 -1 2 -1 -1 -1 1 1 1 -1 0 1 0 -1 -1 
+
+
+e1: -1 0 -1 0 0 1 0 2 0 -1 -2 1 0 -1 -1 0 
+-1 -2 -2 1 0 1 -2 1 0 -2 -2 -1 -1 2 1 -2 
+0 1 -1 -1 1 2 1 2 -1 -1 0 3 1 2 0 -2 
+-1 0 -2 0 0 1 1 0 -1 0 1 0 -1 1 1 -1 
+1 -1 -1 -2 2 -2 -2 0 2 -1 2 1 0 -1 0 0 
+0 -2 0 -3 0 -1 0 -1 1 0 -1 0 1 1 0 2 
+-1 0 0 0 0 -1 2 -1 1 1 1 2 -2 -2 1 0 
+-2 0 -1 1 1 0 1 1 -3 -2 -1 0 0 0 -2 1 
+2 -1 1 0 -2 0 1 1 0 1 -1 0 2 1 0 1 
+0 2 1 1 -1 1 0 0 1 -1 -1 0 -2 -1 0 0 
+-1 -1 -1 1 2 1 2 -2 2 0 -1 2 3 0 -3 -1 
+-2 0 0 1 -1 -1 2 0 2 -1 2 1 0 1 0 3 
+-1 1 0 0 0 -1 0 1 2 1 -1 1 1 0 2 1 
+2 0 1 1 0 0 -2 1 1 1 0 -1 0 -1 1 0 
+-1 -1 1 -1 -2 0 0 -2 0 0 0 2 0 -1 -2 0 
+1 -1 1 -1 -1 0 1 1 0 -1 3 -3 -1 -2 0 0 
+
+
+e2: 0 1 0 1 -2 0 -2 -1 2 1 -1 -1 0 0 1 -2 
+-1 -3 -1 -2 0 -1 1 0 0 1 2 -1 -1 1 1 0 
+-1 0 -1 1 0 0 1 -2 -1 0 -2 -2 1 1 -2 1 
+0 1 1 1 -1 0 0 0 -2 1 -2 2 -2 0 0 -1 
+0 2 -2 -1 2 -2 -2 2 -1 -1 -1 0 0 -1 0 0 
+1 1 1 -1 -1 0 0 0 1 1 1 1 -1 0 1 2 
+-1 1 0 -2 0 -1 0 0 0 -1 -2 0 1 1 1 0 
+1 0 0 -1 2 1 2 0 -1 1 1 0 0 0 0 -2 
+-1 0 0 -1 0 -2 -1 2 -1 0 1 0 2 -1 0 0 
+1 -1 3 -1 -1 0 -2 0 -1 1 2 -1 1 -1 -1 -1 
+-1 3 -2 2 -1 -2 3 2 1 0 0 1 1 0 0 1 
+1 -1 1 -2 1 0 0 0 -1 0 -1 -1 0 0 1 0 
+3 0 -1 -1 1 1 1 -1 1 -1 0 -1 2 -2 0 2 
+-2 2 1 1 1 2 0 0 -1 1 1 0 0 0 -3 2 
+0 -2 1 -1 1 0 1 0 0 -2 0 1 2 0 2 -1 
+2 2 1 -1 1 1 -1 1 -1 1 -2 1 2 1 1 2 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+D65CF59227D5B027C614A898D03C70F554A1B9EB1272DD3FD4622555A9C50986
+
+s: 0 -1 0 1 0 1 -1 1 3 0 2 0 1 0 -2 0 
+-2 1 0 0 -1 2 0 -1 1 1 2 -1 -2 1 0 -1 
+2 0 -2 1 -1 -1 -1 1 0 0 0 -2 0 -1 0 -1 
+1 2 0 0 1 -2 -1 0 0 0 -3 -3 1 -1 -2 0 
+-1 -3 1 -1 1 -1 0 1 -1 1 1 -1 0 2 -1 2 
+0 -1 -1 0 -2 1 0 0 1 -2 0 -1 1 -1 0 -1 
+0 1 0 1 0 -3 -1 -1 -2 3 0 -1 1 1 1 -1 
+-2 0 -1 -1 1 0 0 2 -1 -1 -1 -1 0 2 -1 2 
+-2 -1 -2 1 -1 2 1 -2 0 0 -2 1 1 0 0 0 
+-1 -2 0 0 1 -2 1 2 0 1 -1 1 1 0 -2 0 
+-1 -1 -1 2 1 1 -2 0 0 0 0 0 0 0 -1 0 
+1 0 1 2 0 -2 0 1 1 0 2 1 2 0 -2 1 
+0 0 -2 1 0 0 1 0 -1 1 1 0 0 1 0 0 
+3 0 0 -1 1 -2 -1 -2 -1 1 0 0 -1 2 1 1 
+-2 2 0 1 -1 -1 -1 -1 -1 3 2 0 -1 0 0 1 
+0 0 -2 1 1 -1 0 0 0 1 0 0 -1 1 1 0 
+
+
+e: 0 1 0 1 -1 0 -1 -1 -1 0 0 0 -1 1 1 1 
+0 0 -1 -1 -1 1 1 1 1 2 1 2 0 -1 0 0 
+0 -2 1 0 1 0 1 -1 -3 2 -1 0 -2 0 1 0 
+-2 0 0 -1 2 0 1 -1 0 1 0 -1 0 -1 0 0 
+0 1 1 -1 0 0 0 1 -1 0 0 0 0 -1 1 1 
+1 -2 1 2 0 0 1 2 2 0 0 2 0 3 -1 2 
+1 3 0 1 0 2 0 0 -3 1 0 2 -1 -2 -2 1 
+-1 1 0 1 1 -1 -1 -2 -1 0 0 -2 1 -1 2 1 
+-1 2 -1 -1 -1 2 0 1 0 -1 -2 1 0 1 0 0 
+1 2 0 0 1 1 1 0 3 -1 1 2 -1 0 -1 0 
+0 2 -1 -1 0 1 -2 0 -1 -1 0 1 2 -1 -1 1 
+2 1 -1 0 -1 0 -2 1 -1 -2 1 0 0 -1 0 2 
+-1 -1 0 -1 0 0 1 0 2 1 -1 2 2 2 1 -2 
+1 2 2 0 0 1 -1 1 0 1 1 0 1 0 0 -1 
+1 -1 0 0 -1 0 2 3 -1 1 2 0 2 -1 -1 3 
+0 3 1 2 1 0 -1 0 0 0 -2 1 -3 0 2 0 
+
+
+r: 2 0 -2 -2 -1 0 -1 1 -2 1 0 0 -1 0 1 0 
+0 -2 1 0 0 1 0 0 -2 -2 1 1 0 0 0 0 
+0 0 0 1 1 1 0 -1 0 1 -1 0 0 -2 1 1 
+1 0 0 -3 0 0 -2 -1 -2 1 0 -2 -1 -1 1 0 
+1 -1 -2 -2 0 1 0 0 -1 0 -1 -1 -2 0 1 -2 
+0 1 0 0 3 0 0 -1 0 0 -1 0 -2 0 0 1 
+1 2 -2 1 1 -2 0 1 0 0 1 0 -2 -2 1 0 
+0 0 -1 -1 -1 0 -1 -1 -2 0 -1 0 -1 -2 1 0 
+0 0 -3 0 2 0 0 0 1 -1 1 -1 2 0 0 3 
+0 0 0 -1 2 0 0 1 -1 1 3 -2 0 2 0 -1 
+0 2 1 1 -1 0 -1 -1 2 0 0 1 -1 2 -1 -1 
+0 2 -2 1 -1 -1 1 -1 2 1 0 1 -2 -2 1 0 
+-2 2 -1 1 2 0 0 -1 -1 0 1 0 0 -2 0 2 
+1 0 0 1 -1 -2 0 -2 2 1 -2 -2 1 -2 -2 1 
+-1 0 1 1 1 -2 -1 2 0 1 -1 -1 0 -1 -2 1 
+0 1 -2 -1 -2 -1 0 1 1 0 2 0 1 0 0 2 
+
+
+e1: -1 1 0 -3 -2 -2 0 -1 2 0 1 -1 0 0 1 -1 
+2 0 0 2 2 -3 -1 1 -2 0 0 -1 -2 -1 2 0 
+0 1 1 1 1 -1 0 1 0 2 1 1 -1 -1 1 -3 
+-1 1 0 -2 -1 1 -1 -1 0 0 -2 -2 2 1 -1 0 
+-1 -1 0 0 1 0 -1 0 -1 -1 -1 1 1 -1 0 -1 
+0 1 -1 0 0 0 1 0 0 -2 2 0 -1 1 1 -1 
+1 0 1 2 -1 -1 1 0 3 1 1 -1 0 1 0 0 
+-1 0 0 -1 0 2 2 1 0 -1 1 -2 0 0 -1 0 
+0 0 -1 -1 0 -1 1 0 -1 0 2 -2 0 0 -1 1 
+0 -1 0 -2 1 -2 0 -1 3 -1 1 2 -1 1 1 0 
+-2 -1 0 2 0 -1 -1 0 1 -3 -2 0 -1 0 -1 1 
+-1 0 0 -2 -1 -1 -2 -2 2 0 -1 1 2 1 2 0 
+0 -1 1 -1 0 0 0 1 1 -2 1 0 -1 -1 -2 -2 
+1 -2 -2 -1 1 -2 0 1 2 2 1 -1 0 2 1 1 
+0 -2 -1 0 1 1 0 1 1 0 -2 1 1 1 0 -1 
+-2 1 -1 2 0 0 2 1 1 -1 2 2 -1 0 0 1 
+
+
+e2: 1 0 1 -1 0 0 0 0 0 2 0 0 0 -1 0 1 
+1 -1 1 -1 1 0 1 0 -1 0 0 0 1 2 0 -1 
+0 0 2 -1 -2 2 3 3 0 -2 1 0 -1 0 1 -1 
+-1 1 3 -1 -1 1 -1 1 0 1 1 0 0 -1 2 2 
+-1 1 0 -2 -1 -1 0 2 -1 1 1 1 -1 -2 1 -3 
+0 0 0 -2 -1 0 -1 1 2 0 -1 -1 -1 0 0 1 
+0 1 2 1 0 0 -1 1 0 3 0 1 -1 1 1 1 
+1 -2 0 -2 1 -1 2 0 -2 2 0 1 0 0 1 -2 
+1 0 -1 -2 -1 1 1 2 -1 -1 -2 0 1 0 1 0 
+-2 -2 -3 -1 0 -2 -1 0 1 -1 1 -1 1 2 -1 2 
+-2 -1 0 0 -2 -1 0 1 -2 -1 0 1 0 0 0 0 
+1 0 1 -2 -1 0 1 1 -1 0 1 1 -1 -2 0 0 
+2 1 0 0 -1 1 -1 -1 1 2 -2 -1 -1 1 0 1 
+0 1 0 -1 1 -1 -1 2 1 -3 0 -1 -2 2 0 1 
+-1 0 1 0 1 0 -1 -1 1 0 0 0 1 1 3 -1 
+1 -1 -1 -1 3 0 0 1 0 -2 -2 1 2 2 2 1 
+
+
+[0;32mI (563) KYBER: Noise generation complete.[0m
+
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x403795a9:0x3fc97c40 0x40379571:0x3fc97c60 0x4037a37a:0x3fc97c80 0x4037b56b:0x3fc97d00 0x4037a440:0x3fc97d20 0x4037a436:0x3c029908 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 840abac9a
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403796f9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1598
+load:0x403c8700,len:0xd20
+load:0x403cb700,len:0x2f40
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1362-g346870a304-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  4 2025 16:07:24[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a14ch ( 41292) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a174 vaddr=3fc92600 size=02cc4h ( 11460) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001ce40 vaddr=40374000 size=031d8h ( 12760) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149c4h ( 84420) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=000349ec vaddr=403771d8 size=0b31ch ( 45852) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=0003fd10 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     kyber-esp32[0m
+[0;32mI (172) app_init: App version:      bde7ca9-dirty[0m
+[0;32mI (176) app_init: Compile time:     Aug  4 2025 16:07:21[0m
+[0;32mI (181) app_init: ELF file SHA256:  840abac9a...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0-dev-1362-g346870a304-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FC95F60 len 000537B0 (333 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: dio[0m
+[0;33mW (237) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (249) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) KYBER: Generating noise polynomials for Kyber512...[0m
+[0;32mI (283) KYBER: Seed:[0m
+314CCB5B7851AE31A84629F81834E48D98075FD85B9E543896546EFA9292DA9F
+
+s: -1 1 2 0 -1 0 0 -1 -2 -2 0 1 2 -1 1 -1 
+0 1 -1 -1 0 -1 1 -1 1 1 0 2 -2 0 1 1 
+-1 -2 0 1 3 0 1 0 -1 1 1 1 2 -1 2 -1 
+0 2 0 0 -1 0 -1 0 -3 0 -1 1 -1 -1 -1 0 
+-1 2 -1 0 0 0 1 -1 -2 -2 1 -2 1 -1 2 -1 
+1 1 -2 0 -1 1 0 -1 0 1 1 1 0 0 0 -2 
+1 0 -1 0 2 -2 0 1 -1 0 0 0 -1 -1 -2 0 
+-1 -1 1 0 2 0 1 1 0 0 1 1 -1 0 0 -2 
