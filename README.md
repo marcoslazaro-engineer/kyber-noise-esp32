@@ -7,7 +7,7 @@ esp/
 
 ├── esp-idf/ # ESP-IDF toolchain (not included)
 
-└── kyber-esp32/ # This project
+└── kyber-noise-esp32/ # This project
 
 Only `kyber-esp32/` is included in this repository. You must install `esp-idf` manually by following the official Espressif installation guide:
 
