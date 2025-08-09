@@ -15,11 +15,15 @@ Only `kyber-esp32/` is included in this repository. You must install `esp-idf` m
 
 ## Features
 
-- Written in standard C for ESP32-S3 target.
-- Generates matrix `A` from a random seed.
-- Output is printed to UART via `printf()`.
-- Can be extended for full Kyber KeyGen / Encapsulation / Decapsulation routines.
-- Structured for hardware-level testing (e.g., power analysis, fault injection).
+Written in standard C for ESP32-S3 target.
+
+Generates Kyber noise polynomials from a random seed using the official Kyber noise sampling routine.
+
+Output is printed to UART via printf().
+
+Can be extended for full Kyber KeyGen / Encapsulation / Decapsulation routines.
+
+Structured for hardware-level testing (e.g., power analysis, fault injection).
 
 ## Building and Flashing
 
