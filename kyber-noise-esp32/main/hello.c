@@ -31,7 +31,7 @@ void app_main(void) {
     uint8_t seed[KYBER_SYMBYTES];
     poly s, e, r, e1, e2;
 
-    // Generate a random seed
+    // random seed
     randombytes(seed, KYBER_SYMBYTES);
 
     ESP_LOGI(TAG, "Seed:");
@@ -46,14 +46,13 @@ void app_main(void) {
    static uint8_t buf_e1[KYBER_ETA1 * KYBER_N / 4];
    static uint8_t buf_e2[KYBER_ETA1 * KYBER_N / 4];
 
-    // Generate pseudorandom data with nonce for each
     kyber_shake256_prf(buf_s, sizeof(buf_s), seed, 0);
     kyber_shake256_prf(buf_e, sizeof(buf_e), seed, 1);
     kyber_shake256_prf(buf_r, sizeof(buf_r), seed, 2);
     kyber_shake256_prf(buf_e1, sizeof(buf_e1), seed, 3);
     kyber_shake256_prf(buf_e2, sizeof(buf_e2), seed, 4);
 
-    // Convert PRF output to polynomials with centered binomial distribution
+    //  centered binomial distribution
     poly_cbd_eta1(&s, buf_s);
     poly_cbd_eta1(&e, buf_e);
     poly_cbd_eta1(&r, buf_r);
