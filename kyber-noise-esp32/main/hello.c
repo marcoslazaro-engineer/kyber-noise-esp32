@@ -4,8 +4,6 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_log.h"
-#include "esp_random.h"
-
 #include "params.h"
 #include "poly.h"
 #include "cbd.h"
@@ -55,9 +53,9 @@ void app_main(void) {
     //  centered binomial distribution
     poly_cbd_eta1(&s, buf_s);
     poly_cbd_eta1(&e, buf_e);
-    poly_cbd_eta1(&r, buf_r);
-    poly_cbd_eta1(&e1, buf_e1);
-    poly_cbd_eta1(&e2, buf_e2);
+    poly_cbd_eta2(&r, buf_r);
+    poly_cbd_eta2(&e1, buf_e1);
+    poly_cbd_eta2(&e2, buf_e2);
 
     // Print results
     print_poly("s", &s);
