@@ -1,5 +1,5 @@
 idf_component_register(
     SRCS "hello.c"
     INCLUDE_DIRS ""
-    PRIV_REQUIRES kyber
+    PRIV_REQUIRES kyber driver esp_timer
 )
