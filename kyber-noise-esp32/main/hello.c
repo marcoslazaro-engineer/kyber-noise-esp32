@@ -119,13 +119,13 @@ void app_main(void) {
     int64_t t_total1 = esp_timer_get_time();
     printf("# t_total_noise_us=%" PRId64 "\n", (t_total1 - t_total0));
 
-    // --- Dump polys (determinado por seed)
+    // --- Dump polys 
     print_poly("s (eta1)",  &s);
     print_poly("e (eta1)",  &e);
     print_poly("r (eta2)",  &r);
     print_poly("e1 (eta2)", &e1);
     print_poly("e2 (eta2)", &e2);
 
-    // Mantén vivo (evita watchdog si quieres) con delay largo
+    // Stop
     while (1) vTaskDelay(pdMS_TO_TICKS(1000));
 }
